@@ -3,11 +3,379 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Допинг'26 — материалы</title>
-<meta http-equiv="refresh" content="0; url=./partners/">
-<style>body{font-family:system-ui,sans-serif;background:#F3F5F8;color:#333;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}a{color:#3C67D6}</style>
+<title>Допинг'26 — конференция для владельцев фитнес-студий</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#3C67D6; --blue10:#ECF1FF; --blue20:#CAD9FF; --bluelight:#3FABFF; --bluedark:#2d54bd;
+    --green:#26B99A; --green-acc:#4EB410; --green10:#EDF7E7;
+    --orange:#F19819; --orange10:#FEF4E7;
+    --ink:#252525; --text:#333333; --grey:#757885; --grey2:#999999;
+    --white:#fff; --smoke:#F3F5F8; --block:#EEEFF1; --lightgray:#F8F9FB; --border:#E4E6EB;
+    --sh-sm:0 2px 6px rgba(51,51,51,.06);
+    --sh-md:0 14px 36px rgba(51,51,51,.14);
+    --sh-lg:0 30px 60px -20px rgba(60,103,214,.18);
+    --sh-cta:0 8px 24px rgba(63,171,255,.4);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Golos Text',system-ui,sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  section{padding:88px 0}
+  h1,h2,h3,h4{color:var(--ink);letter-spacing:-.02em}
+  .blue{color:var(--blue)}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);background:var(--blue10);padding:8px 16px;border-radius:100px}
+  .h2{font-size:46px;font-weight:800;line-height:1.08;text-align:center;letter-spacing:-.03em}
+  .lead{text-align:center;color:var(--grey);font-size:19px;margin:18px auto 0;max-width:640px;font-weight:500}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:18px 36px;border-radius:14px;font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease;font-family:inherit}
+  .btn-pri{background:var(--bluelight);color:#fff;box-shadow:var(--sh-cta)}
+  .btn-pri:hover{transform:translateY(-2px)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
+
+  /* TOPBAR */
+  .top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .top svg{height:24px;width:auto;display:block}
+  .top .r{display:flex;align-items:center;gap:18px}
+  .top .date{font-size:14px;font-weight:600;color:var(--grey)}
+  .top .mini{padding:11px 22px;font-size:15px;border-radius:11px}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,#1a2b52 0%,var(--blue) 55%,var(--bluelight) 130%);color:#fff;overflow:hidden;padding:0}
+  .hero .wrap{position:relative;z-index:2;padding-top:72px;padding-bottom:80px;text-align:center}
+  .hero .spark{position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(255,255,255,.18),transparent 45%),radial-gradient(circle at 10% 90%,rgba(63,171,255,.35),transparent 40%);z-index:1}
+  .hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;padding:9px 18px;border-radius:100px;font-size:14px;font-weight:600}
+  .hero h1{color:#fff;font-size:72px;font-weight:900;line-height:1;letter-spacing:-.04em;margin:24px auto 0;max-width:900px}
+  .hero h1 em{font-style:normal;color:#cfe0ff}
+  .hero .sub{font-size:21px;color:rgba(255,255,255,.9);max-width:620px;margin:24px auto 0;font-weight:500}
+  .hero .meta{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin:30px 0 0;font-size:16px;font-weight:600;color:#fff}
+  .hero .meta span{display:inline-flex;align-items:center;gap:8px}
+  .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+  .hero .price-hint{margin-top:16px;font-size:14px;color:rgba(255,255,255,.7)}
+  .hero .nums{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:54px;padding-top:38px;border-top:1px solid rgba(255,255,255,.18)}
+  .hero .nums .n{font-size:40px;font-weight:900;letter-spacing:-.03em;line-height:1}
+  .hero .nums .l{font-size:14px;color:rgba(255,255,255,.78);margin-top:6px;font-weight:500}
+
+  /* BANNER */
+  .hbanner{position:relative;width:100%;overflow:hidden;background:var(--blue);line-height:0}
+  .hbanner img{width:100%;height:auto;display:block}
+
+  /* FOR WHOM */
+  .who{background:var(--smoke)}
+  .whogrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  .wc{background:#fff;border:1px solid var(--border);border-radius:18px;padding:28px;box-shadow:var(--sh-sm)}
+  .wc .e{font-size:30px}
+  .wc h3{font-size:20px;font-weight:700;margin-top:14px}
+  .wc p{font-size:15px;color:var(--grey);margin-top:8px;font-weight:500}
+
+  /* VIBE / what */
+  .vibe .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+  .vibe .t{background:var(--smoke);border-radius:16px;padding:24px;text-align:center}
+  .vibe .t .e{font-size:30px}
+  .vibe .t b{display:block;font-size:16px;font-weight:700;color:var(--ink);margin-top:12px}
+  .vibe .t span{font-size:13px;color:var(--grey);font-weight:500;display:block;margin-top:4px}
+
+  /* SPEAKERS */
+  .spk{background:var(--ink);color:#fff}
+  .spk .h2{color:#fff}
+  .spk .lead{color:rgba(255,255,255,.7)}
+  .spkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+  .sp{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px}
+  .sp .nm{font-size:18px;font-weight:700;color:#fff}
+  .sp .st{font-size:14px;color:var(--bluelight);font-weight:600;margin-top:2px}
+  .sp .tp{font-size:14px;color:rgba(255,255,255,.72);margin-top:12px;font-weight:500}
+  .spk .note{text-align:center;color:rgba(255,255,255,.6);font-size:15px;margin-top:32px;font-weight:500}
+
+  /* GALLERY */
+  .gal .grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px;margin-top:46px}
+  .ph{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--blue),var(--bluedark));box-shadow:var(--sh-sm)}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+  .ph:hover img{transform:scale(1.06)}
+  .ph.big{grid-column:span 2;grid-row:span 2}
+  .ph.wide{grid-column:span 2}
+
+  /* VIDEO */
+  .vid{background:var(--smoke)}
+  .vid .box{max-width:920px;margin:0 auto;text-align:center}
+  .player{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:16/9;background:#000;margin-top:28px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* REVIEWS */
+  .rev{background:var(--blue10)}
+  .revgrid{columns:3;column-gap:18px;margin-top:46px}
+  .q{background:#fff;border-radius:18px;padding:26px;box-shadow:var(--sh-sm);break-inside:avoid;margin-bottom:18px}
+  .q .stars{color:var(--orange);font-size:15px;letter-spacing:2px}
+  .q p{font-size:15.5px;color:var(--text);margin-top:12px;font-weight:500}
+  .q .who{font-size:13.5px;color:var(--grey);margin-top:14px;font-weight:600}
+
+  /* PRICING */
+  .price .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;align-items:stretch}
+  .tier{position:relative;background:#fff;border:1px solid var(--border);border-radius:22px;padding:34px 28px;display:flex;flex-direction:column;box-shadow:var(--sh-sm)}
+  .tier.hot{border:2px solid var(--blue);box-shadow:var(--sh-lg)}
+  .tier .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:6px 16px;border-radius:100px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+  .tier h3{font-size:20px;font-weight:700}
+  .tier .p{font-size:42px;font-weight:900;color:var(--ink);letter-spacing:-.03em;margin-top:10px}
+  .tier .p small{font-size:18px;color:var(--grey);font-weight:600}
+  .tier ul{list-style:none;margin:22px 0 26px;flex:1}
+  .tier li{font-size:15px;color:var(--text);font-weight:500;padding:9px 0 9px 28px;position:relative;border-top:1px solid var(--border)}
+  .tier li:first-child{border-top:none}
+  .tier li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+  .tier li.muted{color:var(--grey2)}
+  .tier li.muted::before{content:"–";color:var(--grey2)}
+  .tier .btn{width:100%}
+
+  /* SPECIAL OFFER */
+  .offer{background:linear-gradient(120deg,var(--green),#1ea88a);color:#fff;border-radius:24px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px;box-shadow:0 20px 50px -18px rgba(38,185,154,.5)}
+  .offer .l b{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.85}
+  .offer .l h3{color:#fff;font-size:27px;font-weight:800;margin-top:8px;letter-spacing:-.02em}
+  .offer .l p{font-size:15px;opacity:.9;margin-top:8px;font-weight:500;max-width:560px}
+  .offer .r{text-align:center;flex-shrink:0}
+  .offer .r .big{font-size:46px;font-weight:900;letter-spacing:-.03em;line-height:1}
+  .offer .r .small{font-size:13px;opacity:.85;font-weight:600}
+  .offer .r .btn{margin-top:12px;background:#fff;color:#138a70}
+
+  /* FAQ */
+  .faq .box{max-width:780px;margin:40px auto 0}
+  .fitem{border-bottom:1px solid var(--border);padding:22px 0}
+  .fitem b{font-size:17px;font-weight:700;color:var(--ink)}
+  .fitem p{font-size:15px;color:var(--grey);margin-top:8px;font-weight:500}
+
+  /* FINAL CTA */
+  .final{background:linear-gradient(135deg,var(--blue),var(--bluedark));color:#fff;text-align:center}
+  .final h2{color:#fff;font-size:46px;font-weight:900;letter-spacing:-.03em;max-width:680px;margin:0 auto}
+  .final p{color:rgba(255,255,255,.85);font-size:18px;margin:18px auto 0;max-width:520px;font-weight:500}
+  .final .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .final .note{margin-top:22px;font-size:14px;color:rgba(255,255,255,.65)}
+  .final .note a{color:#fff;font-weight:600}
+
+  .foot{background:var(--ink);color:rgba(255,255,255,.5);text-align:center;padding:34px 0;font-size:13px}
+
+  @media(max-width:860px){
+    .vibe .grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:720px){
+    .wrap{padding:0 20px}
+    section{padding:56px 0}
+    .h2,.final h2{font-size:30px}
+    .hero h1{font-size:42px}
+    .hero .sub{font-size:18px}
+    .hero .nums{gap:26px}
+    .hero .nums .n{font-size:32px}
+    .whogrid,.spkgrid,.vibe .grid{grid-template-columns:1fr}
+    .revgrid{columns:1}
+    .price .tiers{grid-template-columns:1fr}
+    .grid{grid-template-columns:repeat(2,1fr)!important;grid-auto-rows:130px!important}
+    .offer{flex-direction:column;text-align:center;padding:30px}
+    .offer .l h3{font-size:23px}
+  }
+</style>
 </head>
 <body>
-<p>Перенаправление… Если не сработало — <a href="./partners/">открыть предложение для партнёров</a>.</p>
+
+<!-- TOPBAR -->
+<div class="top"><div class="wrap">
+  <svg width="263" height="40" viewBox="0 0 263 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#cl)"><path d="M246.597 8.52101H262.442V1.09247H238.116V38.3444L262.442 38.2352V30.8066H246.597V22.9411H262.442V15.8403H246.597V8.52101Z" fill="#3C67D6"></path><path d="M229.303 19.1176C228.187 18.2436 226.848 17.5882 225.509 17.042C224.058 16.4957 222.719 16.0588 221.492 15.6218C220.599 15.2941 219.818 15.0756 219.037 14.8571C218.368 14.6386 217.698 14.3109 217.14 13.9831C216.582 13.6554 216.248 13.3277 215.913 12.8907C215.69 12.4537 215.466 11.9075 215.466 11.3613C215.466 10.5966 215.69 10.1596 216.024 9.72265C216.359 9.28568 216.805 8.84871 217.252 8.52098C217.698 8.19325 218.368 7.97476 218.926 7.86552C219.595 7.75628 220.153 7.75628 220.822 7.75628C222.05 7.75628 223.277 7.86552 224.505 8.41174C225.732 8.95795 226.848 9.72266 227.629 10.7058L231.088 2.84033C231.088 2.84033 228.857 1.63865 227.629 1.20168C225.397 0.436972 223.166 0 221.046 0C219.26 0 217.475 0.218485 215.69 0.655459C213.904 1.09243 212.342 1.74789 211.003 2.73108C209.664 3.71427 208.437 4.91595 207.656 6.33611C206.763 7.75627 206.317 9.61341 206.317 11.689C206.317 13.3277 206.54 14.7479 207.098 15.9495C207.656 17.1512 208.437 18.1344 209.329 18.8991C210.222 19.773 211.226 20.4285 212.454 20.9747C213.569 21.5209 214.797 21.9579 216.024 22.3949C217.252 22.8319 218.368 23.1596 219.372 23.4873C220.376 23.8151 221.157 24.1428 221.827 24.5798C222.496 25.0167 222.943 25.4537 223.389 25.8907C223.724 26.3276 223.947 26.9831 223.947 27.4201C223.947 27.9663 223.835 28.6218 223.5 29.0587C223.166 29.4957 222.831 29.8234 222.385 30.1512C221.938 30.4789 221.38 30.6974 220.711 30.8066C220.041 30.9159 219.372 31.0251 218.702 31.0251C217.252 31.0251 215.69 30.6974 214.127 29.9327C212.565 29.168 211.784 28.9495 210.445 27.8571L206.874 36.1595C206.874 36.1595 209.218 37.252 210.668 37.7982C213.235 38.6721 215.801 39.2184 218.591 39.2184C220.488 39.2184 222.273 38.9999 224.058 38.4537C224.282 38.3444 224.505 38.3444 224.728 38.2352C225.397 38.0167 226.848 37.252 226.848 37.252L232.539 23.9243C232.539 23.9243 232.427 22.7226 231.535 21.3025C230.977 20.4285 230.196 19.6638 229.303 19.1176Z" fill="#3C67D6"></path><path d="M179.202 1.09247L163.245 38.3444H172.283L175.408 31.0251H191.476L194.6 38.3444H203.973L188.017 1.09247H179.202ZM178.867 22.8319L183.553 11.9076L188.128 22.8319H178.867Z" fill="#3C67D6"></path><path d="M159.563 21.6302C158.893 20.8655 158.001 20.3193 157.108 19.773C156.215 19.3361 155.099 19.0083 154.095 18.7898V18.6806C155.992 18.1344 157.443 17.1512 158.558 15.731C159.674 14.4201 160.232 12.6722 160.232 10.5966C160.232 8.73944 159.786 7.10079 159.005 5.89911C158.224 4.69743 157.219 3.71424 155.992 2.94954C154.765 2.18484 153.314 1.74786 151.752 1.42013C150.19 1.0924 148.739 0.983154 147.288 0.983154H138.808L132.225 16.2772V38.2352H147.4C149.185 38.2352 150.971 38.0167 152.756 37.689C154.541 37.3612 155.992 36.7058 157.443 35.8318C158.782 34.9579 159.897 33.8654 160.679 32.4453C161.46 31.0251 161.906 29.3865 161.906 27.3108C161.906 26.1092 161.683 25.0167 161.236 24.0335C160.79 23.1596 160.232 22.2856 159.563 21.6302ZM141.04 8.30247H145.503C147.4 8.30247 148.851 8.6302 149.855 9.17641C150.859 9.72263 151.305 10.7058 151.305 11.9075C151.305 13.2184 150.859 14.2016 149.855 14.9663C148.962 15.6218 147.623 15.9495 145.838 15.9495H140.928V8.30247H141.04ZM152.087 28.8402C151.64 29.3865 151.194 29.8234 150.524 30.1512C149.855 30.4789 149.185 30.6974 148.404 30.8066C147.623 30.9159 146.842 31.0251 146.173 31.0251H141.04V22.9411H146.173C148.181 22.9411 149.743 23.2688 150.859 23.815C152.087 24.3613 152.644 25.126 152.644 26.6554C152.644 27.5293 152.533 28.294 152.087 28.8402Z" fill="#3C67D6"></path><path d="M91.9426 1.09247H82.6812V38.3444H91.9426V1.09247Z" fill="#3C67D6"></path><path d="M97.4093 1.09247V8.7395H108.121V38.3444H117.271V8.7395H128.095V1.09247H97.4093Z" fill="#3C67D6"></path><path d="M52.442 38.3444H61.4803V23.0504H68.1754L71.2997 15.8403H61.4803V8.7395H74.3125L77.66 1.09247H52.442V38.3444Z" fill="#3C67D6"></path><path d="M30.5894 17.107C31.399 15.5785 31.8616 13.8235 31.8616 11.9553C31.8616 6.29416 27.6404 1.53878 22.147 0.632996C20.2966 5.27515 18.7354 8.84168 18.7354 8.84168H20.0653C21.5688 8.84168 22.8987 9.80408 23.2457 11.2194C23.7083 13.1442 22.3205 14.8991 20.4701 15.069H16.0176L12.4903 23.4475H20.181C20.4123 23.4475 20.5858 23.4475 20.8171 23.4475H23.8239C25.3274 23.4475 26.773 24.4665 27.0621 25.8818C27.4669 27.8632 25.9056 29.6748 23.9396 29.6748H9.8882L6.24524 38.0533H23.9396C30.416 38.0533 35.6202 32.9016 35.6202 26.5611C35.6202 22.6549 33.6541 19.2016 30.5894 17.107Z" fill="#3C67D6"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.11565 0.406616V8.78514H15.2079L18.793 0.406616H0.11565ZM0.11565 23.3343H8.96283L12.548 14.9558H0.11565V23.3343ZM0.057826 37.9401H2.77559L6.36072 29.5616H0V37.9401H0.057826Z" fill="#3C67D6"></path></g><defs><clipPath id="cl"><rect width="262.442" height="39.2184" fill="white"></rect></clipPath></defs></svg>
+  <div class="r">
+    <span class="date">1 октября · Москва</span>
+    <a href="#tickets" class="btn btn-pri mini">Купить билет</a>
+  </div>
+</div></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="spark"></div>
+  <div class="wrap">
+    <span class="badge">⚡ Конференция «Допинг» от Fitbase · 2-й сезон</span>
+    <h1>Заряди свою студию <em>на год вперёд</em></h1>
+    <p class="sub">Один день среди владельцев фитнес-студий. Только практики, реальные кейсы и цифры — как расти, удерживать клиентов и зарабатывать больше.</p>
+    <div class="meta">
+      <span>📅 1 октября 2026</span>
+      <span>📍 Москва</span>
+      <span>🎤 10 спикеров-практиков</span>
+    </div>
+    <div class="cta">
+      <a href="#tickets" class="btn btn-pri">Купить билет от 7 900 ₽</a>
+      <a href="#video" class="btn btn-ghost">▶ Как это было</a>
+    </div>
+    <div class="price-hint">Спец-цена для своих и тех, кто уже был — до 1 июля 👇</div>
+    <div class="nums">
+      <div><div class="n">400+</div><div class="l">владельцев студий в зале</div></div>
+      <div><div class="n">10</div><div class="l">спикеров — только практики</div></div>
+      <div><div class="n">1</div><div class="l">день, который окупится</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER -->
+<div class="hbanner"><img src="assets/doping/hero.jpg" alt="Сцена конференции Допинг" onerror="this.style.display='none'"></div>
+
+<!-- FOR WHOM -->
+<section class="who"><div class="wrap">
+  <h2 class="h2">Для кого этот день</h2>
+  <p class="lead">Для тех, кто сам ведёт бизнес и хочет, чтобы он рос без хаоса.</p>
+  <div class="whogrid">
+    <div class="wc"><div class="e">🧘</div><h3>Студии</h3><p>Пилатес, растяжка, йога, барре, танцы, единоборства, детские направления.</p></div>
+    <div class="wc"><div class="e">🏢</div><h3>Сети 2–5 точек</h3><p>Управляете несколькими студиями и хотите видеть бизнес целиком, по показателям.</p></div>
+    <div class="wc"><div class="e">🚀</div><h3>Те, кто открывается</h3><p>Запускаете студию и хотите сразу выстроить процессы, а не наступать на грабли.</p></div>
+  </div>
+</div></section>
+
+<!-- VIBE -->
+<section class="vibe"><div class="wrap">
+  <h2 class="h2">Что вас ждёт</h2>
+  <p class="lead">Никаких скучных лекций «ни о чём». Прикладно, живо и с драйвом.</p>
+  <div class="grid">
+    <div class="t"><div class="e">📊</div><b>Реальные кейсы</b><span>с цифрами и финмоделями</span></div>
+    <div class="t"><div class="e">🤝</div><b>Нетворкинг</b><span>400+ коллег-владельцев</span></div>
+    <div class="t"><div class="e">🎙️</div><b>Стендап и интерактивы</b><span>смех сквозь слёзы предпринимателя</span></div>
+    <div class="t"><div class="e">🎁</div><b>Подарки и розыгрыши</b><span>от партнёров индустрии</span></div>
+    <div class="t"><div class="e">🍽️</div><b>Обед и фуршет</b><span>всё включено в билет</span></div>
+    <div class="t"><div class="e">🥂</div><b>Афтепати</b><span>с напитками и общением</span></div>
+    <div class="t"><div class="e">📝</div><b>Рабочие инструменты</b><span>чек-листы, шаблоны, регламенты</span></div>
+    <div class="t"><div class="e">🧠</div><b>Ответы на «больное»</b><span>налоги, кадры, удержание</span></div>
+  </div>
+</div></section>
+
+<!-- SPEAKERS -->
+<section class="spk"><div class="wrap">
+  <h2 class="h2">Спикеры — собственники, а не теоретики</h2>
+  <p class="lead">Каждый рассказывает свой реальный опыт. В прошлом сезоне на сцене были:</p>
+  <div class="spkgrid">
+    <div class="sp"><div class="nm">Милана Семёнова</div><div class="st">сеть FITLAB</div><div class="tp">«Зачем нужны админы, если можно без них» — экономия ~1 млн ₽/год на автоматизации.</div></div>
+    <div class="sp"><div class="nm">Пётр Козлов</div><div class="st">сеть «На спорте», 8 студий</div><div class="tp">Как расти в ЖК без цифрового маркетинга и формула выбора локации.</div></div>
+    <div class="sp"><div class="nm">Евгения Сухомлинова</div><div class="st">METODSTUDIO, пилатес</div><div class="tp">«Атмосфера как стратегия»: найм по ценностям и идеальный администратор.</div></div>
+    <div class="sp"><div class="nm">Антон Котов</div><div class="st">сеть растяжки «Ne Derevo»</div><div class="tp">Как выбирать локацию по принципу тест-драйва и не открыть вторую точку рано.</div></div>
+    <div class="sp"><div class="nm">Илья Саввин</div><div class="st">детская сеть «Nemeria»</div><div class="tp">Как масштабироваться через HR-бренд, а не множить хаос.</div></div>
+    <div class="sp"><div class="nm">Антон Середа</div><div class="st">Smart Fitness</div><div class="tp">«Доверие как технология»: путь клиента, метрики LTV и CAC в студии.</div></div>
+  </div>
+  <p class="note">🎯 Состав спикеров Допинг'26 — анонсируем в программе. Темы этого года: налоговая реформа, удержание, кадры, рекурренты.</p>
+</div></section>
+
+<!-- GALLERY -->
+<section class="gal"><div class="wrap">
+  <h2 class="h2">Атмосфера прошлого Допинга</h2>
+  <p class="lead">Полный зал, живой движ и нетворкинг до самой ночи.</p>
+  <div class="grid">
+    <div class="ph big"><img loading="lazy" src="assets/doping/01.jpg" alt="Зал и сцена Допинг" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph"><img loading="lazy" src="assets/doping/02.jpg" alt="Аудитория" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph"><img loading="lazy" src="assets/doping/09.jpg" alt="Спикер на сцене" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph wide"><img loading="lazy" src="assets/doping/04.jpg" alt="Нетворкинг" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph"><img loading="lazy" src="assets/doping/03.jpg" alt="Стенд партнёра" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph"><img loading="lazy" src="assets/doping/05.jpg" alt="Награждение" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph"><img loading="lazy" src="assets/doping/08.jpg" alt="Выступление" onerror="this.closest('.ph').style.display='none'"></div>
+    <div class="ph wide"><img loading="lazy" src="assets/doping/07.jpg" alt="Команда Допинг" onerror="this.closest('.ph').style.display='none'"></div>
+  </div>
+</div></section>
+
+<!-- VIDEO -->
+<section class="vid" id="video"><div class="wrap"><div class="box">
+  <h2 class="h2">Как это было</h2>
+  <p class="lead">2 минуты драйва Допинг'25 — энергия, ради которой стоит вернуться.</p>
+  <div class="player"><iframe src="https://www.youtube-nocookie.com/embed/-fyBQH4DwgM" title="Допинг'25 — афтермуви" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div></div></section>
+
+<!-- REVIEWS -->
+<section class="rev"><div class="wrap">
+  <h2 class="h2">Что говорили участники</h2>
+  <p class="lead">Отзывы из чата конференции — дословно.</p>
+  <div class="revgrid">
+    <div class="q"><div class="stars">★★★★★</div><p>«Лучшая конфа, на которой я была! Вы замечательные, организация топ ❤️»</p><div class="who">Ася Ирвес — Разбор/Прожарка</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«Был на разных конфах — эта понравилась больше всего. Так держать!»</p><div class="who">Андрей Стыцюн</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«После Допинга за один день сделал столько правок в студиях, как за полгода не делал. Огромное спасибо! 💪»</p><div class="who">Ярослав — владелец студий</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«Всё продумано до мелочей: навигация, тайминг, кейтеринг, локация, поддержка. Поздравляю с дебютом!»</p><div class="who">Мария Топникова</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«Отдельно спасибо за тайминг! Как бывший орг конференций понимаю, как это сложно. Организация огонь! 🔥»</p><div class="who">Анастасия — fitness coach</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«Идеальный микс: комфортная атмосфера, живое общение и польза. Вдохновляет на новые свершения!»</p><div class="who">Пётр Козлов — сеть «На спорте»</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«Море идей для внедрения и классный нетворкинг. Спасибо за потрясающую организацию 🥰»</p><div class="who">Алина Егорова — 5 студий, Чебоксары</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«День полный озарений и инсайтов 💚 Надо чаще встречаться!»</p><div class="who">Ольга Кулешова</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>«Лекции очень интересные и полезные. Ни разу не пожалела, что пришла 🔥»</p><div class="who">Ксения — Salgariyafly</div></div>
+  </div>
+</div></section>
+
+<!-- PRICING -->
+<section class="price" id="tickets"><div class="wrap">
+  <h2 class="h2">Билеты</h2>
+  <p class="lead">Выберите формат участия. Чем раньше — тем выгоднее.</p>
+  <div class="tiers">
+    <div class="tier">
+      <h3>Стандарт</h3>
+      <div class="p">7 900 <small>₽</small></div>
+      <ul>
+        <li>Участие в конференции, весь день</li>
+        <li>Обед и напитки</li>
+        <li>Фуршет и афтепати</li>
+        <li>Нетворкинг с владельцами студий</li>
+        <li class="muted">Запись и презентации</li>
+        <li class="muted">Персональная консультация</li>
+      </ul>
+      <a href="https://t.me/A_Gulyanina" target="_blank" rel="noopener" class="btn btn-dark">Выбрать</a>
+    </div>
+    <div class="tier hot">
+      <div class="tag">Популярный</div>
+      <h3>Стандарт + записи</h3>
+      <div class="p">9 900 <small>₽</small></div>
+      <ul>
+        <li>Всё из тарифа «Стандарт»</li>
+        <li><b>Запись всех выступлений</b></li>
+        <li><b>Все презентации спикеров</b></li>
+        <li>Доступ к материалам после</li>
+        <li class="muted">Персональная консультация</li>
+      </ul>
+      <a href="https://t.me/A_Gulyanina" target="_blank" rel="noopener" class="btn btn-pri">Выбрать</a>
+    </div>
+    <div class="tier">
+      <h3>VIP</h3>
+      <div class="p">19 900 <small>₽</small></div>
+      <ul>
+        <li>Всё из тарифа «Стандарт + записи»</li>
+        <li><b>2-часовая персональная консультация</b> любого спикера на выбор</li>
+        <li>Разбор вашей студии один на один</li>
+        <li>Приоритетные места в зале</li>
+      </ul>
+      <a href="https://t.me/A_Gulyanina" target="_blank" rel="noopener" class="btn btn-dark">Выбрать</a>
+    </div>
+  </div>
+
+  <!-- SPECIAL OFFER -->
+  <div class="offer">
+    <div class="l">
+      <b>⚡ Спец-цена для своих</b>
+      <h3>Уже были на Допинге или вы клиент Fitbase?</h3>
+      <p>До 1 июля — билет «Стандарт + записи» по цене обычного входа. Все выступления и презентации включены.</p>
+    </div>
+    <div class="r">
+      <div class="big">7 900 ₽</div>
+      <div class="small">вместо 9 900 ₽ · до 1 июля</div>
+      <a href="https://t.me/A_Gulyanina" target="_blank" rel="noopener" class="btn">Забрать цену</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="faq"><div class="wrap">
+  <h2 class="h2">Частые вопросы</h2>
+  <div class="box">
+    <div class="fitem"><b>Когда и где?</b><p>1 октября 2026, Москва. Точный адрес площадки пришлём после покупки билета.</p></div>
+    <div class="fitem"><b>Я только открываю студию — мне будет полезно?</b><p>Да. Часть программы — про запуск без типичных ошибок: процессы, кадры, экономика с первого дня.</p></div>
+    <div class="fitem"><b>Что если не смогу прийти лично?</b><p>Возьмите тариф с записью — получите все выступления и презентации в записи после конференции.</p></div>
+    <div class="fitem"><b>Как работает консультация в VIP?</b><p>После конференции согласуем удобное время и спикера — 2 часа разбора вашей студии один на один.</p></div>
+    <div class="fitem"><b>Можно купить несколько билетов на команду?</b><p>Конечно. Напишите Анастасии — поможем с билетами на команду.</p></div>
+  </div>
+</div></section>
+
+<!-- FINAL CTA -->
+<section class="final"><div class="wrap">
+  <h2>Места ограничены вместимостью зала</h2>
+  <p>В прошлом году зал был полный. Берите билет заранее — и по выгодной цене.</p>
+  <div class="cta">
+    <a href="#tickets" class="btn btn-pri">Купить билет от 7 900 ₽</a>
+    <a href="https://t.me/A_Gulyanina" target="_blank" rel="noopener" class="btn btn-ghost">Задать вопрос</a>
+  </div>
+  <div class="note">Вопросы и билеты на команду — Анастасия Гулянина, <a href="https://t.me/A_Gulyanina" target="_blank" rel="noopener">@A_Gulyanina</a></div>
+</div></section>
+<div class="foot">«Допинг» от Fitbase · конференция для владельцев фитнес-студий · 1 октября 2026, Москва</div>
+
 </body>
 </html>
