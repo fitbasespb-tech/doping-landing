@@ -103,13 +103,31 @@
   .wc h3{font-size:19px;font-weight:700;margin-top:12px}
   .wc p{font-size:15px;color:var(--grey);margin-top:8px}
 
-  /* PROGRAM */
-  .prog .tl{max-width:820px;margin:46px auto 0}
-  .pr{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--border)}
-  .pr .t{font-size:17px;font-weight:700;color:var(--blued)}
-  .pr .d b{font-size:17px;font-weight:700;color:var(--black)}
-  .pr .d p{font-size:15px;color:var(--grey);margin-top:4px}
-  .prog .soon{text-align:center;color:var(--greyl);font-size:15px;margin-top:30px}
+  /* PROGRAM (блочный, CANON v2) */
+  .progblk{background:var(--canvas)}
+  .progblk .blocks{margin-top:44px;display:flex;flex-direction:column;gap:16px;max-width:960px;margin:44px auto 0}
+  .progblk .blk{background:#fff;border:1px solid var(--border);border-radius:24px;overflow:hidden}
+  .progblk .blk-h{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 28px;background:var(--blue);color:#fff;flex-wrap:wrap}
+  .progblk .blk-h .n{font-size:12px;line-height:16px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+  .progblk .blk-h h3{color:#fff;font-size:23px;line-height:26px;font-weight:600;margin-top:4px;letter-spacing:0}
+  .progblk .blk-h .time{font-size:14px;font-weight:600;background:rgba(255,255,255,.16);padding:7px 15px;border-radius:999px;white-space:nowrap}
+  .progblk .rows{padding:6px 28px 18px}
+  .progblk .row{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--border)}
+  .progblk .row:first-child{border-top:none}
+  .progblk .row .t{font-size:16px;font-weight:600;color:var(--blue);padding-top:2px}
+  .progblk .row .who{font-size:13px;line-height:16px;font-weight:500;color:var(--grey);margin-bottom:4px}
+  .progblk .row h4{font-size:20px;line-height:24px;font-weight:600;color:var(--black);letter-spacing:0}
+  .progblk .row p{font-size:16px;line-height:20px;font-weight:500;color:var(--grey);margin-top:6px}
+  .progblk .accent{padding:15px 28px;background:var(--canvas);border-top:1px solid var(--border);font-weight:600;color:var(--blue);font-size:14px}
+  .progblk .pnl-note{padding:16px 28px 2px;font-size:16px;line-height:20px;font-weight:500;color:var(--grey)}
+  .progblk .cases{padding:14px 28px 22px;background:var(--blue10);margin:8px 20px 20px;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .progblk .case{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .progblk .case .tag{display:inline-block;font-size:12px;font-weight:500;color:var(--blue);background:var(--blue10);border-radius:999px;padding:3px 10px;margin-bottom:8px}
+  .progblk .case .who{font-size:13px;font-weight:500;color:var(--grey);margin-bottom:2px}
+  .progblk .case h4{font-size:16px;line-height:20px;font-weight:600;color:var(--black);letter-spacing:0}
+  .progblk .fin-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .progblk .chip{background:#fff;border:1px solid var(--border);border-radius:999px;padding:11px 22px;font-size:14px;font-weight:600;color:var(--black)}
+  .progblk .pnote{text-align:center;color:var(--grey);font-size:13px;margin-top:28px}
 
   /* SPEAKERS */
   .spk{background:var(--black);color:#fff}
@@ -323,18 +341,66 @@
 </div></section>
 
 <!-- PROGRAM -->
-<section class="prog"><div class="wrap">
+<section class="progblk"><div class="wrap">
   <div class="center-head"><span class="eyebrow c">Программа дня</span><h2 class="h2 c">Пять блоков практики — с утра до ночи</h2><p class="lede c">Четыре тематических блока и финал. На сцене только владельцы студий и сетей — реальные кейсы, а не лекции.</p></div>
-  <div class="tl">
-    <div class="pr"><div class="t">10:00</div><div class="d"><b>Блок 01 · Рынок, деньги и модель</b><p>Василий (Fitbase) — что происходит с рынком · Александр Галочкин — напутствие · Руслан (Softly) — рекурренты в студию · Екатерина (Эскадо) — себестоимость часа.</p></div></div>
-    <div class="pr"><div class="t">11:30</div><div class="d"><b>Блок 02 · Почему админ не продаёт</b><p>Пётр Козлов (На спорте) — контроль переписки админа · Антон Ромашко (Go Fitness) — мотивация и воронки · Антон (Ne Derevo) — слабые места админа. → Квиз.</p></div></div>
-    <div class="pr"><div class="t">13:15</div><div class="d"><b>Продукт и технологии</b><p>Павел (Fitbase, разработка) — новинки ИТ для студий · Анастасия (Fitbase) — продуктовые фишки мирового рынка.</p></div></div>
-    <div class="pr"><div class="t">14:00</div><div class="d"><b>Обед и нетворкинг</b><p>14:45 — квиз с партнёром.</p></div></div>
-    <div class="pr"><div class="t">15:00</div><div class="d"><b>Блок 03 · панель «Маркетинг, который ничего не стоит»</b><p>Быстрые кейсы по 5–7 минут, модератор Анастасия: Владимир (Контроль), Денис (Скульптура Лайф), Антон Ромашко, Пётр Козлов, Руслан (Softly).</p></div></div>
-    <div class="pr"><div class="t">16:00</div><div class="d"><b>Финал дня · новые деньги и новая модель</b><p>Габриэла Гончарова (H2O) — гранты и социальное предпринимательство · Алексей Кочкин (Свой Фитнес) — зал без персонала: 15 минут в день и окупаемость за полгода.</p></div></div>
-    <div class="pr"><div class="t">17:00 →</div><div class="d"><b>Квиз, фуршет и нетворкинг</b><p>17:00 — квиз для участников · 18:00–21:00 — фуршет и афтепати.</p></div></div>
+  <div class="blocks">
+
+    <div class="blk">
+      <div class="blk-h"><div><div class="n">Блок 01</div><h3>Рынок, деньги и модель</h3></div><span class="time">10:00 – 11:30</span></div>
+      <div class="rows">
+        <div class="row"><div class="t">10:00</div><div><div class="who">Василий · Fitbase</div><h4>Что происходит с рынком студий</h4></div></div>
+        <div class="row"><div class="t">10:15</div><div><div class="who">Александр Галочкин</div><h4>Напутствие будущим миллиардерам</h4></div></div>
+        <div class="row"><div class="t">10:30</div><div><div class="who">Руслан · Softly, СПб</div><h4>Рекурренты в студию</h4><p>Экономика подписки честно, с плюсами и минусами: как рекуррент помогает сохранить бизнес.</p></div></div>
+        <div class="row"><div class="t">11:00</div><div><div class="who">Екатерина · Эскадо, Мурманск</div><h4>Себестоимость часа: как считать и что с этим делать</h4><p>Простая модель себестоимости часа и готовая политика переносов, применимая сразу.</p></div></div>
+      </div>
+    </div>
+
+    <div class="blk">
+      <div class="blk-h"><div><div class="n">Блок 02</div><h3>Почему админ не продаёт</h3></div><span class="time">11:30 – 13:00</span></div>
+      <div class="rows">
+        <div class="row"><div class="t">11:30</div><div><div class="who">Пётр Козлов · На спорте</div><h4>Зачем и как контролировать переписку админа</h4><p>Контроль коммуникаций админов и тренеров как ключ к конверсии.</p></div></div>
+        <div class="row"><div class="t">12:00</div><div><div class="who">Антон Ромашко · Go Fitness</div><h4>Мотивация и воронки, которые продают за вас</h4><p>Система продаж админов: грейды, шкала выплат, задачи через воронки — без «стоять над душой».</p></div></div>
+        <div class="row"><div class="t">12:30</div><div><div class="who">Антон · Ne Derevo</div><h4>Как найти слабые места админа и усилить продажи</h4><p>Диагностика по записям и точки контроля: где именно теряются продажи.</p></div></div>
+      </div>
+      <div class="accent">13:00 — Квиз</div>
+    </div>
+
+    <div class="blk">
+      <div class="blk-h"><div><div class="n">Перед обедом</div><h3>Продукт и технологии</h3></div><span class="time">13:15 – 14:00</span></div>
+      <div class="rows">
+        <div class="row"><div class="t">13:15</div><div><div class="who">Павел · Fitbase, директор разработки</div><h4>Новинки в ИТ-технологиях для студийного бизнеса</h4></div></div>
+        <div class="row"><div class="t">13:30</div><div><div class="who">Анастасия · Fitbase</div><h4>Продуктовые фишки мирового фитнес-рынка</h4></div></div>
+      </div>
+      <div class="accent">14:00 – 14:45 — Обед · 14:45 — Квиз с партнёром</div>
+    </div>
+
+    <div class="blk">
+      <div class="blk-h"><div><div class="n">Блок 03 · панель</div><h3>Смотрим по-новому: маркетинг, который ничего не стоит</h3></div><span class="time">15:00 – 16:00</span></div>
+      <div class="pnl-note">Быстрые кейсы по 5–7 минут и вопросы из зала. Модератор — Анастасия.</div>
+      <div class="cases">
+        <div class="case"><span class="tag">Кейс · 7′</span><div class="who">Владимир · Контроль, Липецк</div><h4>13 000 ₽ и 170 лидов: реалити про обычную девочку</h4></div>
+        <div class="case"><span class="tag">Кейс · 7′</span><div class="who">Денис · Скульптура Лайф</div><h4>Сто рублей, которые меняют выбор 85% новичков</h4></div>
+        <div class="case"><span class="tag">Кейс · 7′</span><div class="who">Антон Ромашко · Go Fitness</div><h4>Звонобот: обзвон базы за копейки</h4></div>
+        <div class="case"><span class="tag">Кейс · 7′</span><div class="who">Пётр Козлов · На спорте</div><h4>Промоутеры, которые дают управляемый результат</h4></div>
+        <div class="case"><span class="tag">Кейс · 7′</span><div class="who">Денис · Скульптура Лайф</div><h4>Кэшбэк, который включают на месяц и выключают навсегда</h4></div>
+        <div class="case"><span class="tag">Кейс · 7′</span><div class="who">Руслан · Softly, СПб</div><h4>Акция, которая годами работала и вдруг перестала</h4></div>
+      </div>
+    </div>
+
+    <div class="blk">
+      <div class="blk-h"><div><div class="n">Финал дня</div><h3>Новые деньги и новая модель</h3></div><span class="time">16:00 – 16:50</span></div>
+      <div class="rows">
+        <div class="row"><div class="t">16:00</div><div><div class="who">Габриэла Гончарова · H2O, Севастополь</div><h4>Продал за 50% стоимости, а получил 100%</h4><p>Гранты, субсидии и социальное предпринимательство как источник новых денег, которых нет в обычном P&amp;L.</p></div></div>
+        <div class="row"><div class="t">16:30</div><div><div class="who">Алексей Кочкин · Свой Фитнес &nbsp;·&nbsp; заключительное выступление</div><h4>Зал без персонала: 15 минут в день и окупаемость за полгода</h4><p>Клуб, который окупился за 6 месяцев и требует 15 минут собственника в день — от локации до запуска.</p></div></div>
+      </div>
+    </div>
+
   </div>
-  <p class="soon">Программа собрана на основе 33 интервью с владельцами студий · состав и тайминг могут уточняться.</p>
+  <div class="fin-row">
+    <div class="chip">17:00 — Квиз для участников</div>
+    <div class="chip">18:00 – 21:00 — Фуршет и нетворкинг</div>
+  </div>
+  <p class="pnote">Программа собрана на основе 33 интервью с владельцами студий · состав и тайминг могут уточняться.</p>
 </div></section>
 
 <!-- SPEAKERS -->
