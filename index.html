@@ -6,18 +6,18 @@
 <title>Допинг'26 — конференция для владельцев фитнес-студий</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --blue:#3FABFF; --blued:#3C67D6; --blue10:#ECF1FF; --blue20:#CAD9FF; --bluedeep:#2d54bd;
+    --blue:#2B65F0; --blued:#2B65F0; --blue10:#ECF1FF; --blue20:#CAD9FF; --bluedeep:#1D50D9;
     --green:#4EB410; --green10:#EDF7E7; --greenT:#26B99A;
     --orange:#F19819; --orange10:#FEF4E7; --red:#ED3D3D;
     --ink:#333333; --black:#252525; --grey:#757885; --greyl:#9898A5; --grey2:#CCCCCC;
-    --white:#fff; --canvas:#F3F5F8; --block:#EEEFF1; --border:#E4E6EB;
-    --sh-sm:0 2px 6px rgba(51,51,51,.06);
-    --sh-md:0 14px 36px rgba(51,51,51,.14);
-    --sh-lg:0 30px 60px -20px rgba(60,103,214,.18);
-    --sh-cta:0 4px 14px rgba(63,171,255,.35);
+    --white:#fff; --canvas:#F8F9FB; --block:#EEEFF1; --border:#E8EBF6;
+    --sh-sm:none;
+    --sh-md:none;
+    --sh-lg:none;
+    --sh-cta:none;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -28,12 +28,12 @@
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--blued)}
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue)}
   .eyebrow.c{justify-content:center}
-  .h2{font-size:48px;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+  .h2{font-size:40px;font-weight:600;line-height:1.1;letter-spacing:0}
   .h2.c{text-align:center}
   .blue{color:var(--blued)}
   .lede{font-size:19px;line-height:1.55;color:var(--grey);font-weight:400}
   .lede.c{text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 30px;border-radius:14px;font-size:16px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 30px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit}
   .btn-pri{background:var(--blue);color:#fff;box-shadow:var(--sh-cta)}
   .btn-pri:hover{transform:translateY(-2px)}
   .btn-dark{background:var(--black);color:#fff}
@@ -48,15 +48,15 @@
   .top svg{height:24px;width:auto;display:block}
   .top .r{display:flex;align-items:center;gap:18px}
   .top .date{font-size:14px;font-weight:600;color:var(--grey)}
-  .top .mini{padding:11px 22px;font-size:15px;border-radius:11px}
+  .top .mini{padding:11px 22px;font-size:15px;border-radius:10px}
 
   /* HERO */
-  .hero{background:linear-gradient(160deg,#102243 0%,var(--blued) 60%,#2f6fd6 120%);color:#fff;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 12%,rgba(63,171,255,.45),transparent 42%),radial-gradient(circle at 6% 96%,rgba(63,171,255,.28),transparent 38%);pointer-events:none}
+  .hero{background:linear-gradient(160deg,#0E2A6E 0%,#2B65F0 68%,#3284FF 120%);color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 12%,rgba(43,101,240,.45),transparent 42%),radial-gradient(circle at 6% 96%,rgba(43,101,240,.28),transparent 38%);pointer-events:none}
   .hero .wrap{position:relative;z-index:2;padding:74px 32px 84px;text-align:center}
   .hero .eyebrow{color:#bcd4ff;justify-content:center}
   .hero .eyebrow::before{background:var(--blue)}
-  .hero h1{color:#fff;font-size:66px;font-weight:700;line-height:1.02;letter-spacing:-.03em;margin:22px auto 0;max-width:880px}
+  .hero h1{color:#fff;font-size:52px;font-weight:600;line-height:1.06;letter-spacing:-.03em;margin:22px auto 0;max-width:880px}
   .hero h1 .y{color:#aacbff}
   .hero .sub{font-size:20px;line-height:1.55;color:rgba(255,255,255,.88);max-width:640px;margin:22px auto 0;font-weight:400}
   .hero .meta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
@@ -64,7 +64,7 @@
   .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
   .hero .hint{margin-top:14px;font-size:14px;color:rgba(255,255,255,.7)}
   .hero .nums{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.16)}
-  .hero .nums .n{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .hero .nums .n{font-size:40px;font-weight:700;letter-spacing:-.03em;line-height:1}
   .hero .nums .l{font-size:14px;color:rgba(255,255,255,.75);margin-top:6px}
 
   /* BANNER */
@@ -82,7 +82,7 @@
   .recap .lede{margin-top:18px}
   .recap .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
   .recap .stat{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px}
-  .recap .stat .n{font-size:34px;font-weight:800;color:var(--blued);letter-spacing:-.02em;line-height:1}
+  .recap .stat .n{font-size:34px;font-weight:700;color:var(--blued);letter-spacing:-.02em;line-height:1}
   .recap .stat .l{font-size:14px;color:var(--grey);margin-top:6px}
   .recap .pic{border-radius:24px;overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/3}
   .recap .pic img{width:100%;height:100%;object-fit:cover;display:block}
@@ -181,22 +181,22 @@
   .tier.hot{border:2px solid var(--blue);box-shadow:var(--sh-lg)}
   .tier .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:6px 16px;border-radius:100px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
   .tier h3{font-size:20px;font-weight:700}
-  .tier .p{font-size:40px;font-weight:800;color:var(--black);letter-spacing:-.03em;margin-top:10px}
+  .tier .p{font-size:40px;font-weight:700;color:var(--black);letter-spacing:-.03em;margin-top:10px}
   .tier .p small{font-size:18px;color:var(--grey);font-weight:600}
   .tier ul{list-style:none;margin:22px 0 26px;flex:1}
   .tier li{font-size:15px;color:var(--ink);padding:9px 0 9px 28px;position:relative;border-top:1px solid var(--border)}
   .tier li:first-child{border-top:none}
-  .tier li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+  .tier li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
   .tier li.muted{color:var(--grey2)}
   .tier li.muted::before{content:"–";color:var(--grey2)}
   .tier .btn{width:100%}
 
-  .offer{background:linear-gradient(120deg,var(--greenT),#1ea88a);color:#fff;border-radius:24px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px;box-shadow:0 20px 50px -18px rgba(38,185,154,.5)}
+  .offer{background:linear-gradient(120deg,var(--greenT),#1ea88a);color:#fff;border-radius:24px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px}
   .offer .l b{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.9}
   .offer .l h3{color:#fff;font-size:26px;font-weight:700;margin-top:8px}
   .offer .l p{font-size:15px;opacity:.92;margin-top:8px;max-width:560px}
   .offer .r{text-align:center;flex-shrink:0}
-  .offer .r .big{font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .offer .r .big{font-size:44px;font-weight:700;letter-spacing:-.03em;line-height:1}
   .offer .r .small{font-size:13px;opacity:.85;font-weight:600}
   .offer .r .btn{margin-top:12px;background:#fff;color:#138a70}
 
@@ -241,7 +241,7 @@
 
 <!-- TOP -->
 <div class="top"><div class="wrap">
-  <svg width="263" height="40" viewBox="0 0 263 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#cl)"><path d="M246.597 8.52101H262.442V1.09247H238.116V38.3444L262.442 38.2352V30.8066H246.597V22.9411H262.442V15.8403H246.597V8.52101Z" fill="#3C67D6"></path><path d="M229.303 19.1176C228.187 18.2436 226.848 17.5882 225.509 17.042C224.058 16.4957 222.719 16.0588 221.492 15.6218C220.599 15.2941 219.818 15.0756 219.037 14.8571C218.368 14.6386 217.698 14.3109 217.14 13.9831C216.582 13.6554 216.248 13.3277 215.913 12.8907C215.69 12.4537 215.466 11.9075 215.466 11.3613C215.466 10.5966 215.69 10.1596 216.024 9.72265C216.359 9.28568 216.805 8.84871 217.252 8.52098C217.698 8.19325 218.368 7.97476 218.926 7.86552C219.595 7.75628 220.153 7.75628 220.822 7.75628C222.05 7.75628 223.277 7.86552 224.505 8.41174C225.732 8.95795 226.848 9.72266 227.629 10.7058L231.088 2.84033C231.088 2.84033 228.857 1.63865 227.629 1.20168C225.397 0.436972 223.166 0 221.046 0C219.26 0 217.475 0.218485 215.69 0.655459C213.904 1.09243 212.342 1.74789 211.003 2.73108C209.664 3.71427 208.437 4.91595 207.656 6.33611C206.763 7.75627 206.317 9.61341 206.317 11.689C206.317 13.3277 206.54 14.7479 207.098 15.9495C207.656 17.1512 208.437 18.1344 209.329 18.8991C210.222 19.773 211.226 20.4285 212.454 20.9747C213.569 21.5209 214.797 21.9579 216.024 22.3949C217.252 22.8319 218.368 23.1596 219.372 23.4873C220.376 23.8151 221.157 24.1428 221.827 24.5798C222.496 25.0167 222.943 25.4537 223.389 25.8907C223.724 26.3276 223.947 26.9831 223.947 27.4201C223.947 27.9663 223.835 28.6218 223.5 29.0587C223.166 29.4957 222.831 29.8234 222.385 30.1512C221.938 30.4789 221.38 30.6974 220.711 30.8066C220.041 30.9159 219.372 31.0251 218.702 31.0251C217.252 31.0251 215.69 30.6974 214.127 29.9327C212.565 29.168 211.784 28.9495 210.445 27.8571L206.874 36.1595C206.874 36.1595 209.218 37.252 210.668 37.7982C213.235 38.6721 215.801 39.2184 218.591 39.2184C220.488 39.2184 222.273 38.9999 224.058 38.4537C224.282 38.3444 224.505 38.3444 224.728 38.2352C225.397 38.0167 226.848 37.252 226.848 37.252L232.539 23.9243C232.539 23.9243 232.427 22.7226 231.535 21.3025C230.977 20.4285 230.196 19.6638 229.303 19.1176Z" fill="#3C67D6"></path><path d="M179.202 1.09247L163.245 38.3444H172.283L175.408 31.0251H191.476L194.6 38.3444H203.973L188.017 1.09247H179.202ZM178.867 22.8319L183.553 11.9076L188.128 22.8319H178.867Z" fill="#3C67D6"></path><path d="M159.563 21.6302C158.893 20.8655 158.001 20.3193 157.108 19.773C156.215 19.3361 155.099 19.0083 154.095 18.7898V18.6806C155.992 18.1344 157.443 17.1512 158.558 15.731C159.674 14.4201 160.232 12.6722 160.232 10.5966C160.232 8.73944 159.786 7.10079 159.005 5.89911C158.224 4.69743 157.219 3.71424 155.992 2.94954C154.765 2.18484 153.314 1.74786 151.752 1.42013C150.19 1.0924 148.739 0.983154 147.288 0.983154H138.808L132.225 16.2772V38.2352H147.4C149.185 38.2352 150.971 38.0167 152.756 37.689C154.541 37.3612 155.992 36.7058 157.443 35.8318C158.782 34.9579 159.897 33.8654 160.679 32.4453C161.46 31.0251 161.906 29.3865 161.906 27.3108C161.906 26.1092 161.683 25.0167 161.236 24.0335C160.79 23.1596 160.232 22.2856 159.563 21.6302ZM141.04 8.30247H145.503C147.4 8.30247 148.851 8.6302 149.855 9.17641C150.859 9.72263 151.305 10.7058 151.305 11.9075C151.305 13.2184 150.859 14.2016 149.855 14.9663C148.962 15.6218 147.623 15.9495 145.838 15.9495H140.928V8.30247H141.04ZM152.087 28.8402C151.64 29.3865 151.194 29.8234 150.524 30.1512C149.855 30.4789 149.185 30.6974 148.404 30.8066C147.623 30.9159 146.842 31.0251 146.173 31.0251H141.04V22.9411H146.173C148.181 22.9411 149.743 23.2688 150.859 23.815C152.087 24.3613 152.644 25.126 152.644 26.6554C152.644 27.5293 152.533 28.294 152.087 28.8402Z" fill="#3C67D6"></path><path d="M91.9426 1.09247H82.6812V38.3444H91.9426V1.09247Z" fill="#3C67D6"></path><path d="M97.4093 1.09247V8.7395H108.121V38.3444H117.271V8.7395H128.095V1.09247H97.4093Z" fill="#3C67D6"></path><path d="M52.442 38.3444H61.4803V23.0504H68.1754L71.2997 15.8403H61.4803V8.7395H74.3125L77.66 1.09247H52.442V38.3444Z" fill="#3C67D6"></path><path d="M30.5894 17.107C31.399 15.5785 31.8616 13.8235 31.8616 11.9553C31.8616 6.29416 27.6404 1.53878 22.147 0.632996C20.2966 5.27515 18.7354 8.84168 18.7354 8.84168H20.0653C21.5688 8.84168 22.8987 9.80408 23.2457 11.2194C23.7083 13.1442 22.3205 14.8991 20.4701 15.069H16.0176L12.4903 23.4475H20.181C20.4123 23.4475 20.5858 23.4475 20.8171 23.4475H23.8239C25.3274 23.4475 26.773 24.4665 27.0621 25.8818C27.4669 27.8632 25.9056 29.6748 23.9396 29.6748H9.8882L6.24524 38.0533H23.9396C30.416 38.0533 35.6202 32.9016 35.6202 26.5611C35.6202 22.6549 33.6541 19.2016 30.5894 17.107Z" fill="#3C67D6"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.11565 0.406616V8.78514H15.2079L18.793 0.406616H0.11565ZM0.11565 23.3343H8.96283L12.548 14.9558H0.11565V23.3343ZM0.057826 37.9401H2.77559L6.36072 29.5616H0V37.9401H0.057826Z" fill="#3C67D6"></path></g><defs><clipPath id="cl"><rect width="262.442" height="39.2184" fill="white"></rect></clipPath></defs></svg>
+  <svg width="263" height="40" viewBox="0 0 263 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#cl)"><path d="M246.597 8.52101H262.442V1.09247H238.116V38.3444L262.442 38.2352V30.8066H246.597V22.9411H262.442V15.8403H246.597V8.52101Z" fill="#2B65F0"></path><path d="M229.303 19.1176C228.187 18.2436 226.848 17.5882 225.509 17.042C224.058 16.4957 222.719 16.0588 221.492 15.6218C220.599 15.2941 219.818 15.0756 219.037 14.8571C218.368 14.6386 217.698 14.3109 217.14 13.9831C216.582 13.6554 216.248 13.3277 215.913 12.8907C215.69 12.4537 215.466 11.9075 215.466 11.3613C215.466 10.5966 215.69 10.1596 216.024 9.72265C216.359 9.28568 216.805 8.84871 217.252 8.52098C217.698 8.19325 218.368 7.97476 218.926 7.86552C219.595 7.75628 220.153 7.75628 220.822 7.75628C222.05 7.75628 223.277 7.86552 224.505 8.41174C225.732 8.95795 226.848 9.72266 227.629 10.7058L231.088 2.84033C231.088 2.84033 228.857 1.63865 227.629 1.20168C225.397 0.436972 223.166 0 221.046 0C219.26 0 217.475 0.218485 215.69 0.655459C213.904 1.09243 212.342 1.74789 211.003 2.73108C209.664 3.71427 208.437 4.91595 207.656 6.33611C206.763 7.75627 206.317 9.61341 206.317 11.689C206.317 13.3277 206.54 14.7479 207.098 15.9495C207.656 17.1512 208.437 18.1344 209.329 18.8991C210.222 19.773 211.226 20.4285 212.454 20.9747C213.569 21.5209 214.797 21.9579 216.024 22.3949C217.252 22.8319 218.368 23.1596 219.372 23.4873C220.376 23.8151 221.157 24.1428 221.827 24.5798C222.496 25.0167 222.943 25.4537 223.389 25.8907C223.724 26.3276 223.947 26.9831 223.947 27.4201C223.947 27.9663 223.835 28.6218 223.5 29.0587C223.166 29.4957 222.831 29.8234 222.385 30.1512C221.938 30.4789 221.38 30.6974 220.711 30.8066C220.041 30.9159 219.372 31.0251 218.702 31.0251C217.252 31.0251 215.69 30.6974 214.127 29.9327C212.565 29.168 211.784 28.9495 210.445 27.8571L206.874 36.1595C206.874 36.1595 209.218 37.252 210.668 37.7982C213.235 38.6721 215.801 39.2184 218.591 39.2184C220.488 39.2184 222.273 38.9999 224.058 38.4537C224.282 38.3444 224.505 38.3444 224.728 38.2352C225.397 38.0167 226.848 37.252 226.848 37.252L232.539 23.9243C232.539 23.9243 232.427 22.7226 231.535 21.3025C230.977 20.4285 230.196 19.6638 229.303 19.1176Z" fill="#2B65F0"></path><path d="M179.202 1.09247L163.245 38.3444H172.283L175.408 31.0251H191.476L194.6 38.3444H203.973L188.017 1.09247H179.202ZM178.867 22.8319L183.553 11.9076L188.128 22.8319H178.867Z" fill="#2B65F0"></path><path d="M159.563 21.6302C158.893 20.8655 158.001 20.3193 157.108 19.773C156.215 19.3361 155.099 19.0083 154.095 18.7898V18.6806C155.992 18.1344 157.443 17.1512 158.558 15.731C159.674 14.4201 160.232 12.6722 160.232 10.5966C160.232 8.73944 159.786 7.10079 159.005 5.89911C158.224 4.69743 157.219 3.71424 155.992 2.94954C154.765 2.18484 153.314 1.74786 151.752 1.42013C150.19 1.0924 148.739 0.983154 147.288 0.983154H138.808L132.225 16.2772V38.2352H147.4C149.185 38.2352 150.971 38.0167 152.756 37.689C154.541 37.3612 155.992 36.7058 157.443 35.8318C158.782 34.9579 159.897 33.8654 160.679 32.4453C161.46 31.0251 161.906 29.3865 161.906 27.3108C161.906 26.1092 161.683 25.0167 161.236 24.0335C160.79 23.1596 160.232 22.2856 159.563 21.6302ZM141.04 8.30247H145.503C147.4 8.30247 148.851 8.6302 149.855 9.17641C150.859 9.72263 151.305 10.7058 151.305 11.9075C151.305 13.2184 150.859 14.2016 149.855 14.9663C148.962 15.6218 147.623 15.9495 145.838 15.9495H140.928V8.30247H141.04ZM152.087 28.8402C151.64 29.3865 151.194 29.8234 150.524 30.1512C149.855 30.4789 149.185 30.6974 148.404 30.8066C147.623 30.9159 146.842 31.0251 146.173 31.0251H141.04V22.9411H146.173C148.181 22.9411 149.743 23.2688 150.859 23.815C152.087 24.3613 152.644 25.126 152.644 26.6554C152.644 27.5293 152.533 28.294 152.087 28.8402Z" fill="#2B65F0"></path><path d="M91.9426 1.09247H82.6812V38.3444H91.9426V1.09247Z" fill="#2B65F0"></path><path d="M97.4093 1.09247V8.7395H108.121V38.3444H117.271V8.7395H128.095V1.09247H97.4093Z" fill="#2B65F0"></path><path d="M52.442 38.3444H61.4803V23.0504H68.1754L71.2997 15.8403H61.4803V8.7395H74.3125L77.66 1.09247H52.442V38.3444Z" fill="#2B65F0"></path><path d="M30.5894 17.107C31.399 15.5785 31.8616 13.8235 31.8616 11.9553C31.8616 6.29416 27.6404 1.53878 22.147 0.632996C20.2966 5.27515 18.7354 8.84168 18.7354 8.84168H20.0653C21.5688 8.84168 22.8987 9.80408 23.2457 11.2194C23.7083 13.1442 22.3205 14.8991 20.4701 15.069H16.0176L12.4903 23.4475H20.181C20.4123 23.4475 20.5858 23.4475 20.8171 23.4475H23.8239C25.3274 23.4475 26.773 24.4665 27.0621 25.8818C27.4669 27.8632 25.9056 29.6748 23.9396 29.6748H9.8882L6.24524 38.0533H23.9396C30.416 38.0533 35.6202 32.9016 35.6202 26.5611C35.6202 22.6549 33.6541 19.2016 30.5894 17.107Z" fill="#2B65F0"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.11565 0.406616V8.78514H15.2079L18.793 0.406616H0.11565ZM0.11565 23.3343H8.96283L12.548 14.9558H0.11565V23.3343ZM0.057826 37.9401H2.77559L6.36072 29.5616H0V37.9401H0.057826Z" fill="#2B65F0"></path></g><defs><clipPath id="cl"><rect width="262.442" height="39.2184" fill="white"></rect></clipPath></defs></svg>
   <div class="r">
     <span class="date">1 октября · Москва</span>
     <a href="#tickets" class="btn btn-pri mini">Купить билет</a>
@@ -339,16 +339,19 @@
 
 <!-- SPEAKERS -->
 <section class="spk"><div class="wrap">
-  <div class="center-head"><span class="eyebrow c">Спикеры</span><h2 class="h2 c">Собственники, а не теоретики</h2><p class="lede c">Каждый рассказывает свой реальный опыт. В прошлом сезоне на сцене были:</p></div>
+  <div class="center-head"><span class="eyebrow c">Спикеры</span><h2 class="h2 c">Собственники, а не теоретики</h2><p class="lede c">На сцене — практикующие владельцы студий и сетей. Черновой состав, детали и фото добавим ближе к событию.</p></div>
   <div class="spkgrid">
-    <div class="sp"><div class="nm">Милана Семёнова</div><div class="st">сеть FITLAB</div><div class="tp">«Зачем нужны админы, если можно без них» — экономия ~1 млн ₽/год на автоматизации.</div></div>
-    <div class="sp"><div class="nm">Пётр Козлов</div><div class="st">сеть «На спорте», 8 студий</div><div class="tp">Как расти в ЖК без цифрового маркетинга и формула выбора локации.</div></div>
-    <div class="sp"><div class="nm">Евгения Сухомлинова</div><div class="st">METODSTUDIO, пилатес</div><div class="tp">«Атмосфера как стратегия»: найм по ценностям и идеальный администратор.</div></div>
-    <div class="sp"><div class="nm">Антон Котов</div><div class="st">сеть растяжки «Ne Derevo»</div><div class="tp">Как выбирать локацию по принципу тест-драйва и не открыть вторую точку рано.</div></div>
-    <div class="sp"><div class="nm">Илья Саввин</div><div class="st">детская сеть «Nemeria»</div><div class="tp">Как масштабироваться через HR-бренд, а не множить хаос.</div></div>
-    <div class="sp"><div class="nm">Антон Середа</div><div class="st">Smart Fitness</div><div class="tp">«Доверие как технология»: путь клиента, метрики LTV и CAC в студии.</div></div>
+    <div class="sp"><div class="nm">Пётр Козлов</div><div class="st">сеть «На спорте»</div><div class="tp">Контроль переписки админа и промоутеры, которые дают управляемый поток заявок.</div></div>
+    <div class="sp"><div class="nm">Антон Ромашко</div><div class="st">Go Fitness</div><div class="tp">Мотивация и воронки, которые продают за вас: грейды, шкала выплат, задачи.</div></div>
+    <div class="sp"><div class="nm">Антон</div><div class="st">Ne Derevo</div><div class="tp">Как найти слабые места админа по записям и усилить продажи.</div></div>
+    <div class="sp"><div class="nm">Руслан</div><div class="st">Softly, СПб</div><div class="tp">Рекурренты в студию: экономика подписки честно, с плюсами и минусами.</div></div>
+    <div class="sp"><div class="nm">Екатерина</div><div class="st">Эскадо, Мурманск</div><div class="tp">Как считать себестоимость часа и готовая политика переносов.</div></div>
+    <div class="sp"><div class="nm">Алексей Кочкин</div><div class="st">Свой Фитнес</div><div class="tp">Зал без персонала: 15 минут в день и окупаемость за полгода.</div></div>
+    <div class="sp"><div class="nm">Габриэла Гончарова</div><div class="st">H2O, Севастополь</div><div class="tp">Гранты, субсидии и соцпредпринимательство как источник новых денег.</div></div>
+    <div class="sp"><div class="nm">Владимир</div><div class="st">Контроль, Липецк</div><div class="tp">Реалити про 13 000 ₽ и 170 лидов из местных пабликов.</div></div>
+    <div class="sp"><div class="nm">Денис</div><div class="st">Скульптура Лайф</div><div class="tp">Сто рублей, которые меняют выбор 85% новичков, и кэшбэк на месяц.</div></div>
   </div>
-  <p class="note">🎯 Состав спикеров Допинг'26 анонсируем в программе. Хотите выступить с кейсом — напишите нам.</p>
+  <p class="note">Черновой состав — детали выступлений и фото спикеров добавим позже.</p>
 </div></section>
 
 <!-- VENUE -->
